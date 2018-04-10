@@ -1,0 +1,6 @@
+@mixin heading($fontSize) {
+    font-size:$fontSize;
+    font-weight:300;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
