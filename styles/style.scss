@@ -1,0 +1,73 @@
+@import "components/normalize";
+@import "components/typography";
+@import "components/mixins";
+
+// Main Wrapper
+.wrapper {
+    margin:0 auto;
+    max-width:1080px;
+    width:80%;
+}
+
+// Flex
+.flex-container {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+// Variables
+$bg-morning: #ffd95b;
+$bg-midday: #dd8b7d;
+$bg-evening: #8e81b3;
+$bg-night: #3b5374;
+
+// Body
+body {
+    background: linear-gradient(-45deg, $bg-morning, $bg-midday, $bg-evening, $bg-night);
+    background-size: 300% 300%;
+    animation: daylight 20s ease infinite;
+}
+
+// Header 
+header {
+    text-align:center;
+    .header-container {
+        height:100vh;
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+        justify-content: center;
+        .logo-container {
+            width:20%;
+            img {
+                width:100%;
+            }
+        }
+    }
+}
+
+button {
+    padding:10px 25px;
+    border:0;
+    border:1px solid white;
+    text-transform:uppercase;
+    background:none;
+    color:white;
+    letter-spacing:1.7px;
+    border-radius:20px;
+    transition:1s;
+    outline:none;   
+    &:hover, &:focus {
+        box-shadow:0 0 10px rgba(255, 246, 207, 0.8);
+        text-shadow:0 0 10px rgba(255, 246, 207, 0.8);   
+    }
+}
+
+// Animations
+@keyframes daylight {
+  0%   { background-position: 0% 50%   }
+  50%  { background-position: 100% 50% }
+  100% { background-position: 0% 50%   }
+}
+

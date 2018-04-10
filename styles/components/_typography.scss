@@ -1,0 +1,17 @@
+@import "mixins";
+
+html {
+    font-size:62.5%;
+}
+
+body {
+    font-size:1.5rem;
+    font-family: 'Assistant', sans-serif;
+    color:white;
+}
+
+h1 {
+    @include heading(4rem);
+    margin:0;
+    padding-bottom:15px;
+}
