@@ -1,10 +1,10 @@
 {
   "name": "mindful",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "npm": "^5.8.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -27,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/mycupofthi/mindful/issues"
   },
-  "homepage": "https://github.com/mycupofthi/mindful#readme"
+  "homepage": "https://github.com/mycupofthi/mindful#readme",
+  "description": ""
 }
