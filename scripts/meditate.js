@@ -34,9 +34,11 @@ $(function() {
         const sound = soundChoice.find(sound => sound.className.includes("active"));
 
         if (sound.getAttribute("data-value") === "rain") {
-            audio.innerHTML = `<source src="../music/rain.mp3" type="audio/mpeg">`;
+            // add new file (smaller size)
+            // audio.innerHTML = `<source src="" type="audio/mpeg">`;
         } else if (sound.getAttribute("data-value") === "forest") {
-            audio.innerHTML = `<source src="../music/forest.mp3" type="audio/mpeg">`;
+            // add new file (smaller size)
+            // audio.innerHTML = `<source src=".." type="audio/mpeg">`;
         } else {
             return false;
         }
