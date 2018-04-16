@@ -137,6 +137,7 @@ html {
 body {
   font-size: 1.5rem;
   font-family: 'Assistant', sans-serif;
+<<<<<<< HEAD
   color: white;
   letter-spacing: 1.5px;
   font-weight: 300;
@@ -145,12 +146,16 @@ body {
 a {
   color: white;
   text-decoration: none; }
+=======
+  color: white; }
+>>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
 
 h1 {
   font-size: 4rem;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 2px;
+<<<<<<< HEAD
   padding-bottom: 15px; }
   @media (max-width: 480px) {
     h1 {
@@ -325,25 +330,37 @@ form {
   clip-path: inset(100%);
   clip: rect(0 0 0);
   overflow: hidden; }
+=======
+  margin: 0;
+  padding-bottom: 15px; }
+>>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
 
 .wrapper {
   margin: 0 auto;
   max-width: 1080px;
   width: 80%; }
+<<<<<<< HEAD
   @media (max-width: 480px) {
     .wrapper {
       width: 95%; } }
+=======
+>>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
 
 .flex-container {
   display: flex;
   justify-content: center;
   align-items: center; }
 
+<<<<<<< HEAD
 body.splash {
+=======
+body {
+>>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
   background: linear-gradient(-45deg, #ffd95b, #dd8b7d, #8e81b3, #3b5374);
   background-size: 300% 300%;
   animation: daylight 20s ease infinite; }
 
+<<<<<<< HEAD
 body.body-meditation {
   background: linear-gradient(-45deg, #dd8b7d, #b66641);
   background-size: 300% 300%;
@@ -362,11 +379,17 @@ body.body-reflect {
 header, main {
   text-align: center; }
   header .main-container, main .main-container {
+=======
+header {
+  text-align: center; }
+  header .header-container {
+>>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
     height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center; }
+<<<<<<< HEAD
     header .main-container .icon-container, main .main-container .icon-container {
       width: 20%; }
       header .main-container .icon-container img, main .main-container .icon-container img {
@@ -445,6 +468,14 @@ main.new-user {
     border: 0; }
 
 button, input[type=submit] {
+=======
+    header .header-container .logo-container {
+      width: 20%; }
+      header .header-container .logo-container img {
+        width: 100%; }
+
+button {
+>>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
   padding: 10px 25px;
   border: 0;
   border: 1px solid white;
@@ -454,6 +485,7 @@ button, input[type=submit] {
   letter-spacing: 1.7px;
   border-radius: 20px;
   transition: 1s;
+<<<<<<< HEAD
   outline: none;
   margin: 10px 0; }
   button:hover, button:focus, input[type=submit]:hover, input[type=submit]:focus {
@@ -500,6 +532,13 @@ main.new-user.show, .show {
 .popup-modal.confirm.show, .popup-modal.added.show {
   display: flex; }
 
+=======
+  outline: none; }
+  button:hover, button:focus {
+    box-shadow: 0 0 10px rgba(255, 246, 207, 0.8);
+    text-shadow: 0 0 10px rgba(255, 246, 207, 0.8); }
+
+>>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
 @keyframes daylight {
   0% {
     background-position: 0% 50%; }
