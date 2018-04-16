@@ -8,10 +8,36 @@ body {
     font-size:1.5rem;
     font-family: 'Assistant', sans-serif;
     color:white;
+    letter-spacing:1.5px;
+    font-weight:300;
+    line-height:1.2;
+}
+
+a {
+    color:white;
+    text-decoration: none;
 }
 
 h1 {
     @include heading(4rem);
-    margin:0;
     padding-bottom:15px;
+    @media (max-width: 480px) {
+        font-size:3rem;
+    }
+}
+
+h2 {
+    @include heading(3rem);
+    padding-bottom:10px;
+}
+
+h2.flickity-title {
+    @media (max-width: 480px) {
+        font-size:2rem;
+    }
+}
+
+h3 {
+    font-weight:300;
+    font-size:2rem;
 }

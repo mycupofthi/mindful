@@ -1,0 +1,27 @@
+// Variables
+$bg-morning: #ffd95b;
+$bg-midday: #dd8b7d;
+$bg-evening: #8e81b3;
+$bg-night: #3b5374;
+
+.loading-page {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    @include bgGradient(linear-gradient(-45deg, $bg-morning, $bg-midday, $bg-evening, $bg-night));
+    z-index:10;
+}
+
+.loading-wrapper.loaded {
+    visibility:hidden;
+    opacity:0;
+    transition:2s;
+}
+
+.loaded {
+    visibility:hidden;
+    opacity:0;
+    transition:2s;
+}

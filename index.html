@@ -5,21 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Assistant:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">    
     <title>Mindful</title>
 </head>
-<body>
-    <header>
+<body class="splash">
+    <header class="landing-page">
         <div class="flex-container wrapper">
-            <div class="header-container">
-                <div class="logo-container">
+            <div class="main-container">
+                <div class="icon-container">
                     <img src="assets/lotus-logo.png" alt="Lotus flower logo">
                 </div>
                 <h1>Mindful</h1>
                 <button class="sign-in">Sign In</button>
             </div>
         </div>
-        
     </header>
+    <main class="new-user">
+        <div class="flex-container wrapper">
+            <h2 class="welcome-sign"></h2>
+            <h1>Welcome to Mindful</h1>
+            <h3>Let's create an avatar</h3>
+            <div class="avatars">
+                <div class="avatar-container">
+                    <img src="assets/dog-avatar.png" alt="Simple avatar of a dog">
+                </div>
+                <div class="avatar-container">
+                    <img src="assets/cat-avatar.png" alt="Simple avatar of a cat">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src="mindful.auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyC14QUBMa5zgKUKyIyniM6S7uSykcbBMW0",
+            authDomain: "app-mindful.firebaseapp.com",
+            databaseURL: "https://app-mindful.firebaseio.com",
+            projectId: "app-mindful",
+            storageBucket: "app-mindful.appspot.com",
+            messagingSenderId: "683901299376"
+        };
+        firebase.initializeApp(config);
+    </script>
 </body>
 </html>

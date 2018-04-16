@@ -1,12 +1,19 @@
 @import "components/normalize";
 @import "components/typography";
 @import "components/mixins";
+@import "components/meditation";
+@import "components/loader";
+@import "components/release";
+@import "components/reflect";
 
 // Main Wrapper
 .wrapper {
     margin:0 auto;
     max-width:1080px;
     width:80%;
+    @media (max-width: 480px) {
+        width:95%;
+    }
 }
 
 // Flex
@@ -23,22 +30,32 @@ $bg-evening: #8e81b3;
 $bg-night: #3b5374;
 
 // Body
-body {
-    background: linear-gradient(-45deg, $bg-morning, $bg-midday, $bg-evening, $bg-night);
-    background-size: 300% 300%;
-    animation: daylight 20s ease infinite;
+body.splash {
+    @include bgGradient(linear-gradient(-45deg, $bg-morning, $bg-midday, $bg-evening, $bg-night));
+}
+
+body.body-meditation {
+    @include bgGradient(linear-gradient(-45deg, $bg-midday, #b66641));    
+}
+
+body.body-release {
+    @include bgGradient(linear-gradient(-45deg, $bg-midday, $bg-evening));    
+}
+
+body.body-reflect {
+    @include bgGradient(linear-gradient(-45deg, $bg-evening, $bg-night));        
 }
 
 // Header 
-header {
+header, main {
     text-align:center;
-    .header-container {
+    .main-container {
         height:100vh;
         display:flex;
         align-items:center;
         flex-direction:column;
         justify-content: center;
-        .logo-container {
+        .icon-container {
             width:20%;
             img {
                 width:100%;
@@ -47,7 +64,100 @@ header {
     }
 }
 
-button {
+// Flickity 
+.flickity-container {
+    width:50%;
+    margin-bottom:40px;
+    @media (max-width: 768px) {
+        width:75%;
+    }
+    .flickity-card {
+        width:100%;
+        margin:10px 40px 0 0;
+        border-radius:20px;
+        padding:20px;
+        transition:1s;
+        // @media (max-width: 768px) {
+        //     margin: 10px 60px;
+        // }
+        &:hover, &:focus {  
+            text-shadow:0 0 10px rgba(255, 246, 207, 0.8);   
+        }
+    }
+}
+
+main.new-user {   
+    display:flex;
+    opacity:0;
+    visibility: hidden;
+    display:none;
+    .flex-container {
+        flex-direction:column;
+        height:100vh;            
+        h2 {
+            margin:0;
+        }
+        .avatars {
+            display:flex;
+            justify-content: center;
+            margin-top:20px;
+            .avatar-container {
+                width:30%;
+                margin:0 20px;
+                padding:20px;
+                border-radius:25px;
+                transition:0.5s;
+                @media (max-width: 768px) {
+                    width:35%;
+                }
+                @media (max-width: 480px) {
+                    width:40%;
+                    padding:10px;
+                }
+                &:hover {
+                    box-shadow:0 0 10px rgba(255, 246, 207, 0.8);   
+                }
+                img {
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+
+.main-welcome {
+    margin-bottom:-10px;
+    text-transform: capitalize;
+}
+.main-welcome-intro {
+    width:50%;
+}
+
+// Menu 
+.menu-banner {
+    position:fixed;
+    width:100%;
+    height:100px;
+    background:transparent;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content: space-between;
+    padding:20px;
+    align-items: center;
+    .logo-banner {
+        width:80px;
+        img {
+            width:100%;
+        }
+    }
+    .sign-out {
+        border:0;
+    }
+}
+
+// Buttons
+button, input[type=submit] {
     padding:10px 25px;
     border:0;
     border:1px solid white;
@@ -58,10 +168,66 @@ button {
     border-radius:20px;
     transition:1s;
     outline:none;   
+    margin:10px 0;
     &:hover, &:focus {
         box-shadow:0 0 10px rgba(255, 246, 207, 0.8);
         text-shadow:0 0 10px rgba(255, 246, 207, 0.8);   
     }
+}
+
+// Pop-up Modal
+
+.overlay {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.3);
+    visibility: hidden;
+    opacity:0;
+    .popup-modal {
+        @include bgGradient(linear-gradient(-45deg, $bg-midday, $bg-evening));            
+        position:fixed;
+        width:50%;
+        height:50%;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding:20px;
+        border:1px solid white;
+        @media (max-width: 768px) {
+            width:70%;
+        }
+        @media (max-width: 400px) {
+            width:85%;
+        }
+    }
+    // .popup-modal.confirm {
+    //     visibility: hidden;
+    //     opacity:0;
+    // }
+    // .popup-modal.added {
+    //     visibility: hidden;
+    //     opacity:0;
+
+    // }
+}
+
+
+
+main.new-user.show, .show{
+    visibility: visible;
+    opacity:1;
+    display:block;
+}
+.popup-modal.confirm.show, .popup-modal.added.show {
+    // @extend .show;
+    display:flex;
 }
 
 // Animations

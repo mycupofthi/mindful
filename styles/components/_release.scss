@@ -1,0 +1,44 @@
+form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+        margin-bottom:30px;
+    }
+    input[type=text], textarea {
+        background:transparent;
+        outline:0;
+        border:0;
+        border-bottom:1px solid rgba(255,255,255,0.5);
+        text-align:center;
+        padding:10px 25px;
+        color:white;
+        letter-spacing:1.5px;
+        &::placeholder {
+            color:rgba(255, 255, 255, 0.548);
+        }
+    }
+    textarea {
+        border:1px solid rgba(255,255,255,0.5);
+        padding:10px 20px;
+
+        &::-webkit-scrollbar {
+            width: 1rem;
+        }
+         
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow:none;
+            box-shadow:none;
+        }
+         
+        &::-webkit-scrollbar-thumb {
+          background-color: rgba(255,255,255,0.3);
+          outline: 1px solid slategrey;
+        }
+    }
+    input[type=submit] {
+        margin:30px 0;
+    }
+}
+
+.visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
