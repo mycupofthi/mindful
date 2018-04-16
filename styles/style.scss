@@ -1,25 +1,19 @@
 @import "components/normalize";
 @import "components/typography";
 @import "components/mixins";
-<<<<<<< HEAD
 @import "components/meditation";
 @import "components/loader";
 @import "components/release";
 @import "components/reflect";
-=======
->>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
 
 // Main Wrapper
 .wrapper {
     margin:0 auto;
     max-width:1080px;
     width:80%;
-<<<<<<< HEAD
     @media (max-width: 480px) {
         width:95%;
     }
-=======
->>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
 }
 
 // Flex
@@ -36,7 +30,6 @@ $bg-evening: #8e81b3;
 $bg-night: #3b5374;
 
 // Body
-<<<<<<< HEAD
 body.splash {
     @include bgGradient(linear-gradient(-45deg, $bg-morning, $bg-midday, $bg-evening, $bg-night));
 }
@@ -57,28 +50,12 @@ body.body-reflect {
 header, main {
     text-align:center;
     .main-container {
-=======
-body {
-    background: linear-gradient(-45deg, $bg-morning, $bg-midday, $bg-evening, $bg-night);
-    background-size: 300% 300%;
-    animation: daylight 20s ease infinite;
-}
-
-// Header 
-header {
-    text-align:center;
-    .header-container {
->>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
         height:100vh;
         display:flex;
         align-items:center;
         flex-direction:column;
         justify-content: center;
-<<<<<<< HEAD
         .icon-container {
-=======
-        .logo-container {
->>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
             width:20%;
             img {
                 width:100%;
@@ -87,7 +64,6 @@ header {
     }
 }
 
-<<<<<<< HEAD
 // Flickity 
 .flickity-container {
     width:50%;
@@ -182,9 +158,6 @@ main.new-user {
 
 // Buttons
 button, input[type=submit] {
-=======
-button {
->>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
     padding:10px 25px;
     border:0;
     border:1px solid white;
@@ -195,17 +168,13 @@ button {
     border-radius:20px;
     transition:1s;
     outline:none;   
-<<<<<<< HEAD
     margin:10px 0;
-=======
->>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
     &:hover, &:focus {
         box-shadow:0 0 10px rgba(255, 246, 207, 0.8);
         text-shadow:0 0 10px rgba(255, 246, 207, 0.8);   
     }
 }
 
-<<<<<<< HEAD
 // Pop-up Modal
 
 .overlay {
@@ -261,8 +230,6 @@ main.new-user.show, .show{
     display:flex;
 }
 
-=======
->>>>>>> d0b1bc89f30c2af148caeda76bdf318c2c628213
 // Animations
 @keyframes daylight {
   0%   { background-position: 0% 50%   }
