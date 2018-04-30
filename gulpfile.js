@@ -6,7 +6,7 @@ const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
-    return gulp.src('./styles/style.scss')
+    return gulp.src('./styles/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('style.css'))
         .pipe(gulp.dest('./styles'))

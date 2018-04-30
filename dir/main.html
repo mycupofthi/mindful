@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:300,400" rel="stylesheet">    
+    <link rel="stylesheet" href="../styles/style.css"> 
+    <link rel="stylesheet" href="../styles/components/flickity.css">    
+    <title>Mindful | Welcome</title>
+</head>
+<body class="splash">
+    <header>
+        <div class="loading-wrapper">
+            <div class="loading-page">
+                <div class="flex-container wrapper">
+                    <div class="main-container">
+                        <div class="icon-container">
+                            <img src="../assets/lotus-logo.png" alt="Lotus flower logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-banner">
+            <div class="logo-banner">
+                <a href="main.html"><img src="../assets/lotus-logo.png" alt="Lotus flower logo"></a>
+            </div>
+            <button class="sign-out">Sign Out</button>
+        </div>
+    </header>
+    <main>
+        <div class="flex-container wrapper">
+            <div class="main-container">
+                <div class="icon-container avatar">
+                    <img src="../assets/dog-avatar.png" alt="Simple dog avatar">
+                </div>
+                <h3 class="main-welcome"></h3>
+                <div class="flickity-container main-carousel" data-flickity='{ "cellAlign": "center", "autoPlay": 6000, "selectedAttraction": 0.01, "friction": 0.15}'>
+                    <div class="flickity-card">
+                        <a href="meditate.html">
+                            <h2 class="flickity-title">Meditate</h2>
+                            <div class="link-card_description">
+                                Take a deep breath and be mindful of your thoughts.
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flickity-card">
+                        <a href="release.html">
+                            <h2 class="flickity-title">Release</h2>
+                            <div class="link-card_description">
+                                Be mindful of your feelings and release them.
+                            </div>
+                        </a>
+                        </div>
+                    <div class="flickity-card">
+                        <a href="reflect.html">
+                            <h2 class="flickity-title">Reflect</h2>
+                            <div class="link-card_description">
+                                Take a deep breath and be mindful of your thoughts.
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="../scripts//welcome.js"></script>
+    <script>
+        var config = {
+                apiKey: "AIzaSyC14QUBMa5zgKUKyIyniM6S7uSykcbBMW0",
+                authDomain: "app-mindful.firebaseapp.com",
+                databaseURL: "https://app-mindful.firebaseio.com",
+                projectId: "app-mindful",
+                storageBucket: "app-mindful.appspot.com",
+                messagingSenderId: "683901299376"
+            };
+
+        firebase.initializeApp(config);
+    </script>
+</body>
+</html>

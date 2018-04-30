@@ -1,0 +1,119 @@
+.hide {
+	opacity:0;
+	visibility: hidden;
+}
+
+.welcome {
+  width:60%;
+  @media (max-width: 480px) {
+    width:95%;
+  }
+  .input-container {
+    margin:50px 0;
+    display:flex;
+    justify-content: center;
+    .input-group-1, .input-group-2, .input-group-3 {
+      padding:0 50px;
+      position:relative;
+      input[type=radio] {
+        position:absolute;
+        visibility: hidden;
+      }
+      label {
+        position:absolute;
+        font-size:1.4rem;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+      }
+      .radio {
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        border: 2px solid rgba(255,255,255,.3);
+        border-radius: 100%;
+        cursor: pointer;
+        transition:1s;        
+        &:hover {
+          box-shadow:0 0 10px rgba(255, 246, 207, 0.8);   
+        }
+      }
+    }
+    .active {        
+      .radio {
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        box-shadow:0 0 10px rgba(255, 246, 207, 0.8);        
+      }
+    }
+  }
+  input[type=submit] {
+    display:block;
+    margin:0 auto;
+  }
+}
+
+.start-meditation {
+  text-align:center;
+  width:60%;
+  .text-container {
+    height:200px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .loading-text {
+      font-size:3.5rem; 
+      margin:0 auto;
+      text-transform:capitalize;
+    }
+  }
+}
+
+.end-meditation {
+  width:60%;
+  button {
+    display:block;
+    margin:15px auto;
+  }
+}
+
+// Loading Text Animation
+@keyframes textFloat {
+  0%   { 
+    transform:translateY(20px);
+    opacity:0;
+    visibility: hidden;
+
+  }
+  50%  { 
+    transform:translateY(-20px); 
+    opacity:1;
+    visibility: visible;
+  }
+  100% { 
+    transform:translateY(0px);
+    opacity:0;
+    visibility: hidden;
+  }
+}
+
+@keyframes disappear {
+  0%   { 
+    opacity:0;
+    visibility: hidden;
+
+  }
+  50%  { 
+    opacity:1;
+    visibility: visible;
+  }
+  100% { 
+    opacity:0;
+    visibility: hidden;
+  }
+}
+

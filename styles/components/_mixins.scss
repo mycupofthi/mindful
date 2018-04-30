@@ -1,3 +1,9 @@
+@mixin bgGradient($gradient) {
+    background: $gradient;
+    background-size: 300% 300%;
+    animation: daylight 20s ease infinite;
+}
+
 @mixin heading($fontSize) {
     font-size:$fontSize;
     font-weight:300;

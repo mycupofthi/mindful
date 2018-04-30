@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Mindful | Release</title>
+</head>
+
+<body class="body-release">
+    <header>
+        <div class="loading-wrapper">
+            <div class="loading-page">
+                <div class="flex-container wrapper">
+                    <div class="main-container">
+                        <div class="icon-container">
+                            <img src="../assets/lotus-logo.png" alt="Lotus flower logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-banner">
+            <div class="logo-banner">
+                <a href="main.html"><img src="../assets/lotus-logo.png" alt="Lotus flower logo"></a>
+            </div>
+            <button class="sign-out">Sign Out</button>
+        </div>
+    </header>
+    <main>
+        <div class="flex-container wrapper">
+            <div class="main-container">
+                <div class="icon-container avatar">
+                    <img src="../assets/dog-avatar.png" alt="Lotus flower logo">
+                </div>
+                <h3>Today I feel...</h3>
+                <form>
+                    <input type="text" id="emotion" placeholder="grateful">
+                    <label for="notes" class="visuallyhidden">Notes</label>
+                    <textarea name="notes" cols="30" rows="4" id="notes"></textarea>
+                    <input type="submit" value="Release" class="submit">
+                </form>
+            </div>
+        </div>
+        <!-- Overlay and Pop-up -->
+        <div class="overlay">
+            <!-- Add to reflection or release -->
+            <div class="popup-modal confirm">
+                <h3>Release your note<br/> or reflect on it later?</h3>
+                <button id="release">Release</button>
+                <button class="reflect">Reflect</button>
+            </div>
+
+            <!-- Confirmation of add or reject because same word  -->
+            <div class="popup-modal added">
+                <h3 class="added">Your note is added for reflection.</h3>
+                <button id="backRelease">Back to Release</button>
+                <button class="reflect">To Reflection</button>
+            </div>
+        </div>
+    </main>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src="../scripts/welcome.js"></script>
+    <script src="../scripts/release.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>    
+    <script>
+        var config = {
+            apiKey: "AIzaSyC14QUBMa5zgKUKyIyniM6S7uSykcbBMW0",
+            authDomain: "app-mindful.firebaseapp.com",
+            databaseURL: "https://app-mindful.firebaseio.com",
+            projectId: "app-mindful",
+            storageBucket: "app-mindful.appspot.com",
+            messagingSenderId: "683901299376"
+        };
+
+        firebase.initializeApp(config);
+    </script>
+</body>
+
+</html>

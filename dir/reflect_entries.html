@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/components/flickity.css">
+    <title>Mindful | Reflect Entries</title>
+</head>
+
+<body class="body-reflect">
+    <header>
+        <!-- Preloader -->
+        <div class="loading-wrapper">
+            <div class="loading-page">
+                <div class="flex-container wrapper">
+                    <div class="main-container">
+                        <div class="icon-container">
+                            <img src="../assets/lotus-logo.png" alt="Lotus flower logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top banner -->
+        <div class="menu-banner">
+            <div class="logo-banner">
+                <a href="main.html">
+                    <img src="../assets/lotus-logo.png" alt="Lotus flower logo">
+                </a>
+            </div>
+            <button class="sign-out">Sign Out</button>
+        </div>
+    </header>
+    <main>
+        <div class="flex-container wrapper">
+            <div class="main-container">
+
+                <!-- Placeholder avatar -->
+                <div class="icon-container avatar">
+                    <img src="../assets/dog-avatar.png" alt="Lotus flower logo">
+                </div>
+
+                <!-- WHERE THE ENTIRES SHOULD GO -->
+                <h3>This week I felt...</h3>
+                
+            </div>
+
+
+        </div>
+
+    </main>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+        crossorigin='anonymous'></script>
+    <script src="../scripts/welcome.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyC14QUBMa5zgKUKyIyniM6S7uSykcbBMW0",
+            authDomain: "app-mindful.firebaseapp.com",
+            databaseURL: "https://app-mindful.firebaseio.com",
+            projectId: "app-mindful",
+            storageBucket: "app-mindful.appspot.com",
+            messagingSenderId: "683901299376"
+        };
+
+        firebase.initializeApp(config);
+    </script>
+    <script src="../scripts/reflect.js"></script>
+</body>
+
+</html>

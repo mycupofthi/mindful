@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">  
+    <title>Mindful | Meditation</title>
+</head>
+
+<body class="body-meditation">
+    <header>
+        <div class="loading-wrapper">
+            <div class="loading-page">
+                <div class="flex-container wrapper">
+                    <div class="main-container">
+                        <div class="icon-container">
+                            <img src="../assets/lotus-logo.png" alt="Lotus flower logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-banner">
+            <div class="logo-banner">
+                <a href="main.html"><img src="../assets/lotus-logo.png" alt="Lotus flower logo"></a>           
+            </div>
+            <button class="sign-out">Sign Out</button>
+        </div>
+    </header>
+    <main>
+        <div class="flex-container wrapper">
+            <div class="main-container">
+                <div class="icon-container avatar">
+                    <img src="../assets/dog-avatar.png" alt="Lotus flower logo">
+                </div>
+                <div class="welcome">
+                    <h2> Welcome to meditation</h2>
+                    <p>Relax your body and calm your mind. Inspired by the counting meditation technique, the idea is to give your mind something to focus on.</p>
+                    <div class="step-1">
+                        <p>How many minutes would you like to try this experience for?</p>
+                        <div class="input-container">
+                            <div class="input-group-1" data-value="3">
+                                <input type="radio" name="minutes" id="three" value="3">
+                                <label for="three">3</label>
+                                <div class="radio"></div>
+                            </div>
+                            <div class="input-group-1" data-value="4">
+                                <input type="radio" name="minutes" id="five" value="4">
+                                <label for="four">4</label>
+                                <div class="radio"></div>
+                            </div>
+                            <div class="input-group-1" data-value="5">
+                                <input type="radio" name="minutes" id="ten" value="5">
+                                <label for="five">5</label>
+                                <div class="radio"></div>
+                            </div>
+                        </div>
+                        <button class="next">Next</button>
+                    </div>
+                    <div class="step-2">
+                        <p>Would you like to add sound?</p>
+                        <div class="input-container">
+                            <div class="input-group-2" data-value="yes">
+                                <input type="radio" name="answer" id="three" value="yes">
+                                <label for="yes">Y</label>
+                                <div class="radio"></div>
+                            </div>
+                            <div class="input-group-2" data-value="no">
+                                <input type="radio" name="answer" id="five" value="no">
+                                <label for="no">N</label>
+                                <div class="radio"></div>
+                            </div>
+                        </div>
+                        <button class="next-2">Next</button>
+                    </div>
+                    <div class="step-3">
+                        <p>What's your preference, forest or rain?</p>
+                        <div class="input-container">
+                            <div class="input-group-3" data-value="forest">
+                                <input type="radio" name="sound" id="three" value="forest">
+                                <label for="forest">F</label>
+                                <div class="radio"></div>
+                            </div>
+                            <div class="input-group-3" data-value="rain">
+                                <input type="radio" name="sound" id="five" value="rain">
+                                <label for="rain">R</label>
+                                <div class="radio"></div>
+                            </div>
+                        </div>
+                        <button class="begin">Let's begin</button>
+                    </div>
+                </div>
+                <div class="start-meditation">
+                    <div class="text-container">
+                        <p class="loading-text">Ready?</p>
+                    </div>
+                    <button class="start-btn">Start</button>
+                </div>
+                <div class="end-meditation">
+                    <h2>Congrats on finishing your session</h2>
+                    <h3>We hope you feel a little more relaxed.</h3>
+                    <p>Would you like to start again?</p>
+                    <button class="start-again">Yes please</button>
+                    <a href="main.html"><button>No thank you</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Songs -->
+    <audio id="sound"></audio>
+    
+
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src="../scripts/meditate.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="../scripts//welcome.js"></script>    
+    <script>
+        var config = {
+            apiKey: "AIzaSyC14QUBMa5zgKUKyIyniM6S7uSykcbBMW0",
+            authDomain: "app-mindful.firebaseapp.com",
+            databaseURL: "https://app-mindful.firebaseio.com",
+            projectId: "app-mindful",
+            storageBucket: "app-mindful.appspot.com",
+            messagingSenderId: "683901299376"
+        };
+
+        firebase.initializeApp(config);
+    </script>    
+</body>
+
+</html>
