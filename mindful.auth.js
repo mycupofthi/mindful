@@ -7,26 +7,25 @@ function googleSignIn() {
 	if (!firebase.auth().currentUser) {
 		var provider = new firebase.auth.GoogleAuthProvider();
 		provider.addScope('https://www.googleapis.com/auth/plus.login');
-		firebase.auth().signInWithRedirect(provider)
+		firebase.auth().signInWithPopup(provider)
 		.then(function(result) {
 			const user = result.user;
 			const newUser = result.additionalUserInfo.isNewUser;
-			checkLoginState(user, newUser);
+			checkUserExists(user, newUser);
 		})
 	}
 }
 
-function checkLoginState(user, newUser) {
+function checkUserExists(user, newUser) {
 	firebase.auth().onAuthStateChanged(user => {
 		if (user) {
-
 			// If new user, create an avatar
 			if (newUser) {
 				const newSignin = document.querySelector(".new-user");
 				newSignin.classList.add("show");
 				$(".landing-page").hide();		
 
-				// Push user's first name into firebase
+				// Push user's name into firebase
 				const firstName = user.displayName.split(" ")[0];
 				const userId = firebase.auth().currentUser.uid;
 				const dbRef = firebase.database().ref(`/users/${userId}/name`);
@@ -34,7 +33,7 @@ function checkLoginState(user, newUser) {
 
 				welcome.innerHTML = `Welcome ${firstName}!`;
 			
-			// If returning user, direct to main page
+			// If returning, direct to main page
 			} else {
 				window.location.href = "dir/main.html"
 			}
@@ -50,9 +49,10 @@ function checkFbLoginState() {
 			console.log(response);
 		});		
 }
+
 signIn.addEventListener("click", googleSignIn);
 
-// Pushing new avatar onto firebase for future reference
+// New avatar
 function newAvatar() {
 	if (isClicked) {
 		const userId = firebase.auth().currentUser.uid;     
@@ -65,4 +65,18 @@ function newAvatar() {
 	}
 }
 
+function checkLoginState() {
+	firebase.auth().onAuthStateChanged(function(user){
+		if (user) {
+			console.log('logged in');
+			window.location.href = 'dir/main.html';
+		} else {
+			console.log('not logged in');
+		}
+	})
+}
+
 avatar.forEach(avatar => avatar.addEventListener("click", newAvatar))
+window.onload = function() {
+	checkLoginState();
+}

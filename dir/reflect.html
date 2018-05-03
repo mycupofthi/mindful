@@ -42,14 +42,19 @@
                 <h3>This week I felt...</h3>
                 <div class="flickity-container main-carousel" data-flickity='{ "autoPlay": 6000, "selectedAttraction": 0.01, "friction": 0.15}'>
                     <div class="flickity-card" id="emotions">
-                        <h2 class="flickity-title">Mindful</h2>                  
+                        <button class="flickity-title">Mindful</button>              
                     </div>
                 </div>
-                <button class="grab">Reflect</button>
             </div>
         </div>
-        
     </main>
+    <script>
+	    function redirectReflect(id) {
+	    	console.log(id);
+	    	localStorage.setItem('id', id);
+	    	window.location.href = 'reflect_entries.html';
+	    }
+    </script>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
         crossorigin='anonymous'></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
