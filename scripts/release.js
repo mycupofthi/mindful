@@ -7,6 +7,7 @@ $(function() {
     const modal = document.querySelector(".popup-modal");    
     const release = document.querySelector(".release");
     const reflect = document.querySelector(".reflect");
+//    const cancel = document.querySelector("#cancel");
     let isClicked = true;
     
     // Submitting Note
@@ -21,13 +22,19 @@ $(function() {
     
     submit.addEventListener("click", submitIt)
 
-    // Remove popup
+    // Remove popup and erase
     function removeModal() {
         confirm.classList.remove("show");
         emotion.value = "";
         textarea.value = "";
     }
-
+    
+    // Remove popup without erasing
+    function removeModalWithData() {
+        confirm.classList.remove("show");
+    }
+    
+    cancel.addEventListener("click", removeModalWithData);
     // Release note
     release.addEventListener("click", removeModal);
     document.addEventListener("click", function (e) {
@@ -35,6 +42,8 @@ $(function() {
             removeModal();
         }
     })
+    
+    
     
     // Reflect note
     reflect.addEventListener("click", function() {

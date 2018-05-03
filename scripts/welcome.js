@@ -26,8 +26,9 @@ function getUserData() {
 		    // Clean up week-old reflections
 		    const time = Date.now();
 			const cutoff = time - 7 * 24 * 60 * 60 * 1000;
-			var old = dbRefReflect.orderByChild('time').endAt(cutoff).limitToLast(7).once("value", function(snapshot) {
-				snapshot.dbRefReflect.remove();
+			var old = dbRefReflect.orderByChild('time').endAt(cutoff).limitToLast(1);
+			var listener = old.on('child_added', function(snapshot) {
+			    snapshot.dbRefReflect.remove();
 			});
 		} else {
 			// user not signed in
