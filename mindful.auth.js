@@ -69,7 +69,19 @@ function checkLoginState() {
 	firebase.auth().onAuthStateChanged(function(user){
 		if (user) {
 			console.log('logged in');
-			window.location.href = 'dir/main.html';
+			
+			// Redirect if returning user
+			const userId = firebase.auth().currentUser.uid;     
+			const dbRef = firebase.database().ref(`/users/${userId}/avatar`);
+			dbRef.on('value', (data) => {
+				const existing = data.val();
+				if (existing === null) {
+					// do nothing
+				} else {
+					window.location.href = 'dir/main.html';
+				}
+			})
+			
 		} else {
 			console.log('not logged in');
 		}
