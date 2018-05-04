@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Assistant:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style.css">
     <title>Mindful | Release</title>
 </head>
@@ -45,20 +46,13 @@
                 </form>
             </div>
         </div>
-        <!-- Overlay and Pop-up -->
         <div class="overlay">
-            <!-- Add to reflection or release -->
-            <div class="popup-modal confirm">
+            <div class="popup-modal">
+            	
                 <h3>Release your note<br/> or reflect on it later?</h3>
-                <button id="release">Release</button>
+                <button class="release">Release</button>
                 <button class="reflect">Reflect</button>
-            </div>
-
-            <!-- Confirmation of add or reject because same word  -->
-            <div class="popup-modal added">
-                <h3 class="added">Your note is added for reflection.</h3>
-                <button id="backRelease">Back to Release</button>
-                <button class="reflect">To Reflection</button>
+                <button class="cancel">cancel</button>
             </div>
         </div>
     </main>
